@@ -35,23 +35,33 @@ class _DashboardState extends State<Dashboard> with TickerProviderStateMixin {
 
 AppBar _Header() => AppBar(
       backgroundColor: Colors.white,
-      title: Image.asset('assets/images/france-24-logo.png'),
+      elevation: 0,
+      title: Image.asset('assets/images/f24.png'),
       leading: InkWell(
-        child: Icon(Icons.menu),
+        child: Icon(
+          Icons.menu,
+          color: Colors.black87,
+        ),
         onTap: () {
           print("click menu");
         },
       ),
       actions: <Widget>[
         InkWell(
-          child: Icon(Icons.search),
+          child: Icon(
+            Icons.search,
+            color: Colors.black87,
+          ),
           onTap: () {
             print("click search");
           },
         ),
         SizedBox(width: 10),
         InkWell(
-          child: Icon(Icons.notifications_outlined),
+          child: Icon(
+            Icons.notifications_outlined,
+            color: Colors.black87,
+          ),
           onTap: () {
             print("click more");
           },
