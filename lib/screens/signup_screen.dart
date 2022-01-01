@@ -2,8 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:france24/constants/color.dart';
-import 'package:france24/widget/have_account.dart';
-import 'package:france24/widget/rounded_button.dart';
+import 'package:france24/widget/widget.dart';
 
 class SignupScreen extends StatelessWidget {
   double sizeboz = 16.0;

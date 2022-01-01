@@ -7,8 +7,7 @@ import 'package:flutter/widgets.dart';
 import 'package:france24/constants/color.dart';
 import 'package:france24/screens/onboarding.dart';
 import 'package:france24/screens/signup_screen.dart';
-import 'package:france24/widget/have_account.dart';
-import 'package:france24/widget/rounded_button.dart';
+import 'package:france24/widget/widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
