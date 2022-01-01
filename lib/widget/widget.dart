@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, avoid_print
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
@@ -115,37 +115,6 @@ class HaveAccount extends StatelessWidget {
                 style: TextStyle(color: mPrimaryColor),
               ),
             ]),
-      ),
-    );
-  }
-}
-
-class Header extends StatelessWidget {
-  const Header({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-      ),
-      width: MediaQuery.of(context).size.width,
-      height: 75.0,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Padding(
-            padding: EdgeInsets.all(5.0),
-            child: Icon(
-              Icons.menu_rounded,
-              color: Colors.black87,
-              size: 24.0,
-              semanticLabel: 'Menu',
-            ),
-          )
-        ],
       ),
     );
   }

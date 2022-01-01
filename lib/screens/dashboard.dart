@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
-// ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:france24/widget/widget.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -28,36 +28,34 @@ class _DashboardState extends State<Dashboard> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Header(),
+      appBar: _Header(),
     );
   }
 }
 
-class Header extends StatelessWidget {
-  const Header({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
+AppBar _Header() => AppBar(
+      backgroundColor: Colors.white,
+      title: Image.asset('assets/images/france-24-logo.png'),
+      leading: InkWell(
+        child: Icon(Icons.menu),
+        onTap: () {
+          print("click menu");
+        },
       ),
-      width: MediaQuery.of(context).size.width,
-      height: 75.0,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Padding(
-            padding: EdgeInsets.all(5.0),
-            child: Icon(
-              Icons.menu_rounded,
-              color: Colors.black87,
-              size: 24.0,
-              semanticLabel: 'Menu',
-            ),
-          )
-        ],
-      ),
+      actions: <Widget>[
+        InkWell(
+          child: Icon(Icons.search),
+          onTap: () {
+            print("click search");
+          },
+        ),
+        SizedBox(width: 10),
+        InkWell(
+          child: Icon(Icons.notifications_outlined),
+          onTap: () {
+            print("click more");
+          },
+        ),
+        SizedBox(width: 20)
+      ],
     );
-  }
-}

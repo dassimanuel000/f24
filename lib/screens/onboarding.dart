@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:france24/constants/color.dart';
 import 'dart:math';
 
+import 'package:france24/screens/dashboard.dart';
+
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
   @override
@@ -90,7 +92,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ),
                     Container(
                       child: ProgressButton(
-                        onNext: () {},
+                        onNext: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => Dashboard()));
+                        },
                       ),
                     )
                   ],
@@ -152,7 +157,10 @@ class Slide extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => Dashboard()));
+            },
             child: Text(
               "Skip",
               style: kSubtitleStyle,
